@@ -33,7 +33,7 @@ https://docs.cypress.io/guides/getting-started/installing-cypress#What-you-ll-le
 
 ## Secrets
 
-Secrets are stored in "cypress.env.json" which is ignored in gitignored file
+Secrets are stored in "cypress.env.json" which is ignored in gitignore file
 
 Please create file as "cypress.env.json" at project level and add the following values in it:
 
@@ -46,13 +46,13 @@ Please create file as "cypress.env.json" at project level and add the following 
 
 ## Reports
 
-Screenshot and videos can be found in the following location"
+Screenshot and videos can be found at the following location"
 
 videos: "cypress/videos"
 
 Screenshot : "/cypress/screenshots"
 
-Note: These videos/ screenshot will only be present if the test cases are run in headless mode i.e in run mode
+Note: These videos/ screenshot will only be present, if the test cases are run in headless mode i.e in run mode
 ## Tech Stack
 
 This framework is based on:

@@ -31,3 +31,11 @@ Cypress.Commands.add("verifyButtonStatus", (buttonLocator, status) => {
 Cypress.Commands.add("verifyMessageText", (locator, message) => {
   cy.get(locator).contains(message);
 });
+
+//This method is used to verify message presset in popup
+
+Cypress.Commands.add("verifyMessageInpopUp", (locator, message) => {
+  cy.get(locator).then(($input) => {
+    expect($input[0].validationMessage).to.contain(message);
+  });
+});

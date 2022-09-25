@@ -19,7 +19,5 @@ Then(/^I get invalid email error message$/, () => {
 });
 
 Then(/^I get invalid email format error (.*?)$/, (ErrorMessage) => {
-  cy.get("#uniId_1").then(($input) => {
-    expect($input[0].validationMessage).to.contain(ErrorMessage);
-  });
+  cy.verifyMessageInpopUp(organizationalLoginLocators.EmailField, ErrorMessage);
 });

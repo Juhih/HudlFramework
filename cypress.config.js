@@ -6,7 +6,7 @@ module.exports = defineConfig({
   },
   BaseURL: "https://www.hudl.com/login",
   defaultCommandTimeout: 5000,
-  retries: 0,
+  retries: 1,
   e2e: {
     experimentalSessionAndOrigin: true,
     setupNodeEvents(on, config) {

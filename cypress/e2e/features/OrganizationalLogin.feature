@@ -5,6 +5,7 @@ Feature: Organizational Login
     # In this scenario we will test 2 things
     # 1.)Login button disabled until email provided
     # 2.) Validating the error message on providing invalid email
+    @OrganizationalLogin
     Scenario Outline: Passing incorrect eamil on Organizational Login
         When I click on Organizational login button
         Then The Login button is 'disabled'
@@ -17,6 +18,7 @@ Feature: Organizational Login
             | juhi123@gmail.com |
 
     # This scenario will validate the different email format
+    @OrganizationalLogin
     Scenario Outline: Validating Email format
         When I click on Organizational login button
             And I enter the invalid email <inValidEmail>
@@ -33,6 +35,7 @@ Feature: Organizational Login
 
 
     #Navigating on organizational login Page and clicking on Login with email address to validate that user lands on page
+    @OrganizationalLogin
     Scenario Outline: Clicking on Login with userName and password button
         When I click on Organizational login button
             And I click on Login with userName and password button

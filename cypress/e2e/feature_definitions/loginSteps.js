@@ -1,5 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import loginPage from "../pages/loginPage";
+import loginData from "../data/loginData";
 
 Given(/^I am at login Page$/, () => {
   cy.launchURL();
@@ -13,8 +14,8 @@ When(/^I enter the invalid email (.*?)$/, (inValidEmail) => {
   loginPage.enterUserName(inValidEmail);
 });
 
-Then(/^I enter the valid email (.*?)$/, (inValidEmail) => {
-  loginPage.enterUserName(inValidEmail);
+Then(/^I enter the valid email$/, () => {
+  loginPage.enterUserName(Cypress.env("userName"));
 });
 
 Then(/^I press Login button$/, () => {

@@ -11,20 +11,11 @@ When(/^I press reset button$/, () => {
 });
 
 When(/^I get invalid format message$/, () => {
-  cy.get(resetLocators.ResetErrorMessage).contains(
-    "That isn't a valid email address. Make sure to use the email@domain.com format."
-  );
+  resetPasswordPage.invalidFormatMessage();
 });
 
 When(/^I get invalid message$/, () => {
-  cy.get(resetLocators.ResetErrorMessage)
-    .invoke("text")
-    .then(($text) => {
-      cy.wrap($text).should(
-        "equal",
-        "That email address doesn't exist in Hudl. Check with your coach to ensure they have the right email address for you."
-      );
-    });
+  resetPasswordPage.verifyInvalidEmailMessage();
 });
 
 When(/^I get sucsess message$/, () => {
@@ -41,4 +32,8 @@ When(/^I am landed on right URL$/, () => {
 
 When(/^I enter the email on reset Page (.*?)$/, (inValidEmail) => {
   cy.get(resetLocators.EmailField).type(inValidEmail);
+});
+
+When(/^I enter the valid email on reset Page$/, () => {
+  cy.get(resetLocators.EmailField).type(Cypress.env("userName"));
 });

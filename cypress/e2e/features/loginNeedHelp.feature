@@ -35,18 +35,14 @@ Feature: Resetting password to login
 
 
     # Sucsess email on providing the correct Email address and the validation of the sucsess message
-    Scenario Outline: Passing correct eamil on reset password
+    Scenario: Passing correct eamil on reset password
         When I click on Need Help link
-            And I enter the email on reset Page <ValidEmail>
+            And I enter the valid email on reset Page
         When I press reset button
         Then I get sucsess message
-        Examples:
-            | ValidEmail            |
-            | juhi.hazari@gmail.com |
-
 
     # Going on Need help page and clicking on the back button to validate it lands unser on right URl
-    Scenario Outline: Clicking back button on Reset page
+    Scenario: Clicking back button on Reset page
         When I click on Need Help link
             And I click on Back button
         Then I am landed on right URL

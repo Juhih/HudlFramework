@@ -21,13 +21,12 @@ Feature: Organizational Login
         When I click on Organizational login button
             And I enter the invalid email <inValidEmail>
             And I press Login button
-        Then I get invalid email format error
+        Then I get invalid email format error <ErrorMessage>
         Examples:
-            | inValidEmail      |
-            | @gmail.com        |
-            | juhi.hazari.com   |
-            | juhi.hazari@.net  |
-            | juhi.hazari@gmail |
+            | inValidEmail     | ErrorMessage                                |
+            | @gmail.com       | Please enter a part followed by '@'.        |
+            | juhi.hazari.com  | Please include an '@' in the email address. |
+            | juhi.hazari@.net | '.' is used at a wrong position in '.net'.  |
 
 
     #Sucsess email on providing the correct Email ( However we cannot test this because I don't have correct organizational email address)

@@ -1,34 +1,34 @@
 
 # HudlFramework
 
-This framework has been created to validate the login functionality of a Hudl website.
+This framework has been created to validate the login functionality of Hudl website (https://www.hudl.com/login)
 The pages which are automated to test the E2E login functinality are:
 
-1.) Login pages
+1.) Login page
 
-2.) Reset password page (Need Help)
+2.) Reset password page (Need Help? page)
 
-3.) Login with organization
+3.) Login with an organization page
 
 
 ## Installation
 
 Steps to install the project:
-Below things are required prior cloing the git repo:
+Following requirements are needed prior cloing the git repository:
 
 1.) Google Chrome Browser
 
 2.) Node.js
 
-3.) Visual studio Code
+3.) Visual Studio Code (VS Code)
 
-After opening the cloned project in vscode use below commonds
+After opening the cloned project in VS Code use below command:
 ```bash
   npm install
   npm install cypress --save-dev
 ```
     
-You can also use this link for Installation:
+You can also use this link for installation:
 https://docs.cypress.io/guides/getting-started/installing-cypress#What-you-ll-learn 
 
 ## Secrets
@@ -46,13 +46,14 @@ Please create file as "cypress.env.json" at project level and add the following 
 
 ## Reports
 
-Screenshot and videos can be found at the following location"
+Screenshot and videos can be found in the following locations"
 
 videos: "cypress/videos"
 
 Screenshot : "/cypress/screenshots"
 
-Note: These videos/ screenshot will only be present, if the test cases are run in headless mode i.e in run mode
+Note: These videos/ screenshots will only be present if the test cases are run in headless mode i.e. in run mode
+
 ## Tech Stack
 
 This framework is based on:
@@ -63,23 +64,34 @@ Language used : JavaScript
 
 ## Running Tests
 
-To run tests, run the following command
+To run tests, run the following commands:
 
-To run the test cases in headless mode
+To run the test cases in headless mode:
 ```bash
 npx cypress run
 ```
-To run the test cases in open mode
+To run the test cases in open mode:
 ```bash
 npx cypress open
 ```
-To run the test cases based on tags
+To run the test cases based on tags:
 ```bash
 Cypress_tags=TagName npx cypress run
 ```
 
 Note: Test will re-run on failure
-## Failure
 
-One iteration of test "Passing incorrect eamil format on reset password" will fail as it turned out to be a bug
+## Bug in Hudl login
+
+One iteration of test "Passing incorrect email format on reset password" will fail as it turned out to be a bug
+
+## Improvements
+
+1.) Instead of using the "cypress.env.json" , we can use the aws secrets
+
+2.) Adding tags of @smoke/@regression and running those in github actions
+
+3.) Adding API test cases to validate the response of Login functionality
+
+4.) Creating company cypress.io dashboard to store result at a single location
 

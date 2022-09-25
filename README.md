@@ -3,6 +3,7 @@
 
 This framework has been created to validate the login functionality of a Hudl website.
 The pages which are automated to test the E2E login functinality are:
+
 1.) Login pages
 
 2.) Reset password page (Need Help)
@@ -13,9 +14,12 @@ The pages which are automated to test the E2E login functinality are:
 ## Installation
 
 Steps to install the project:
-Below things are required prior cloing the git repo
+Below things are required prior cloing the git repo:
+
 1.) Google Chrome Browser
+
 2.) Node.js
+
 3.) Visual studio Code
 
 After opening the cloned project in vscode use below commonds
@@ -35,6 +39,7 @@ Please create file as "cypress.env.json" at project level and add the following 
 
 {
   "userName": "{your login ID}",
+  
   "user_password": "{your password}"
 }
 
@@ -44,6 +49,7 @@ Please create file as "cypress.env.json" at project level and add the following 
 Screenshot and videos can be found in the following location"
 
 videos: "cypress/videos"
+
 Screenshot : "/cypress/screenshots"
 
 Note: These videos/ screenshot will only be present if the test cases are run in headless mode i.e in run mode
@@ -51,6 +57,7 @@ Note: These videos/ screenshot will only be present if the test cases are run in
 
 This framework is based on:
 Cypress.io 10.8 + Cucumber(BBD) + Page object model (POM)
+
 Language used : JavaScript
 
 

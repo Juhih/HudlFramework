@@ -1,7 +1,7 @@
 
 # HudlFramework
 
-This framework has been created to validate the login functionality of Hudl website (https://www.hudl.com/login)
+This framework has been created to validate the login functionality of Hudl website (https://www.hudl.com/login).
 The pages which are automated to test the E2E login functinality are:
 
 1.) Login page

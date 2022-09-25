@@ -4,7 +4,9 @@
 This framework has been created to validate the login functionality of a Hudl website.
 The pages which are automated to test the E2E login functinality are:
 1.) Login pages
+
 2.) Reset password page (Need Help)
+
 3.) Login with organization
 
 

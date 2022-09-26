@@ -79,7 +79,7 @@ To run the test cases based on tags:
 Cypress_tags=TagName npx cypress run
 ```
 
-Note: Test will re-run on failure
+Note: Test will automatically re-run on failure
 
 ## Bug in Hudl login
 

@@ -85,6 +85,12 @@ Note: Test will automatically re-run on failure
 
 One iteration of test "Passing incorrect email format on reset password" will fail as it turned out to be a bug
 
+Test Data : @gmail.com
+
+Expected: Should give invalid format error
+
+Actual: Getting message that reset email has been sent to your email address
+
 ## Improvements
 
 1.) Instead of using the "cypress.env.json" , we can use the aws secrets
